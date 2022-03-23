@@ -9,9 +9,9 @@ ifndef TEMPLATE_PATH
 	TEMPLATE_PATH := $(ROOT_DIR)/template
 endif
 
-ifeq ($(NRF_CHIP), nrf52810)
+ifeq ($(NRF_CHIP), nrf52832)
 	include $(APP_PROJ_DIR)/nrf52810.mk
-else ifeq ($(NRF_CHIP), nrf52832)
+else ifeq ($(NRF_CHIP), nrf52810)
 	include $(APP_PROJ_DIR)/nrf52832.mk
 else
 	$(error cannot handle NRF_CHIP [$(NRF_CHIP)])
