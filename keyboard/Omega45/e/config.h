@@ -68,13 +68,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_FUNCTION
 
 // LED 配置
-// #define LED_CAPS 4  //caps led ：5 ； led1、2、3、4：19、20、27、26
+// #define LED_CAPS 11  //caps led ：5 ； led1、2、3、4：19、20、27、26
 
 // ws2812 RGB 配置
-#define RGB_DI_PIN 1
-#define RGBLED_NUM 8
+#define RGB_DI_PIN 5
+#define RGBLED_NUM 46
 #define RGBLIGHT_ANIMATIONS
-#define RGB_PWR_PIN 0 // P-mos
+#define RGB_PWR_PIN 7 // P-mos
 //#define RGB_PWR_PIN_REVERSE 12 // N-mos
 
 // 3灯指示配置引脚
@@ -88,18 +88,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // RGB 配置
 #define LED_RGB_CC // 是否为共阴LED
-#define LED_RGB_R 5
-#define LED_RGB_G 4
-#define LED_RGB_B 3
+#define LED_RGB_R 17
+#define LED_RGB_G 18
+#define LED_RGB_B 19
 #define RGB_LIGHT_ANIMATIONS
 
 // 独立硬件按钮
-#define POWER_BUTTON 21
+#define POWER_BUTTON 22
 
 // USB UART 传输配置
 #define HAS_USB // 启用与CH554的通信支持
-#define UART_RXD 6 // UART_RX口IO 17
-#define UART_TXD 7 // UART_TX口IO 18
+#define UART_RXD 12 // UART_RX口IO 17
+#define UART_TXD 13 // UART_TX口IO 18
 //#define UART_DET 19 // UART 检测引脚，若此脚被拉低，则说明USB正在工作。若不配置则使用RX口作为检测引脚
 #define UART_BAUDRATE NRF_UART_BAUDRATE_115200 // 通信波特率，请不要修改
 
@@ -107,41 +107,41 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BATTERY_ADC_PIN NRF_SAADC_INPUT_AIN0 // 电量检测引脚 Pin 2
 
 // 充电检测配置
-//#define PIN_CHARGING !UCC1
-//#define PIN_STANDBY !UCC2
+//#define PIN_CHARGING !UCC2
+//#define PIN_STANDBY !UCC1
 
 // 多用途 Bootloader 按钮
-#define NRF_BL_DFU_MULTI_ROLE_BTN 21
+#define NRF_BL_DFU_MULTI_ROLE_BTN 22
 // Bootloader指示灯
-#define LED_DFU_INIT 5
-#define LED_DFU_START 4
-#define LED_DFU_FINISH 3
+#define LED_DFU_INIT 17
+#define LED_DFU_START 18
+#define LED_DFU_FINISH 19
 
 // 按键阵列配置
-#define MATRIX_ROWS 4 /* 硬件阵列行数 */
-#define MATRIX_COLS 13 /* 硬件阵列列数 */
+#define MATRIX_ROWS 8 /* 硬件阵列行数 */
+#define MATRIX_COLS 6 /* 硬件阵列列数 */
 
 /* key combination for command */
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
 
-static const uint8_t row_pin_array[MATRIX_ROWS] = {31, 30, 29, 28};
-static const uint8_t column_pin_array[MATRIX_COLS] = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 25, 10};
+static const uint8_t row_pin_array[MATRIX_ROWS] = {9, 6, 4, 3, 10, 8, 26, 25};
+static const uint8_t column_pin_array[MATRIX_COLS] = {15, 16, 14, 31, 30, 28};
 
-#define ROW_IN // 键盘阵列的二极管方向是从COL->ROW
+#define COL_IN // 键盘阵列的二极管方向是从COL->ROW
 
 // 旋钮配置
-#define ROTARY_ENCODER_A 9
-#define ROTARY_ENCODER_B 8
+#define ROTARY_ENCODER_A 23
+#define ROTARY_ENCODER_B 24
 // 旋钮正向按钮映射
-#define ROTARY_ENCODER_POS 3,4
+#define ROTARY_ENCODER_POS 15,3
 // 旋钮负向按钮映射
-#define ROTARY_ENCODER_NEG 3,6
+#define ROTARY_ENCODER_NEG 15,25
 // 独立旋钮按键  用于关机后开机
 #define ROTARY_BUTTON 10
 // SSD1306 LCD屏幕
-#define SSD1306_SDA 23
-#define SSD1306_SCL 24
+#define SSD1306_SDA 21
+#define SSD1306_SCL 20
 
 /* define if matrix has ghost */
 // #define MATRIX_HAS_GHOST /* 按键阵列是否出现Ghost Key，若没有加二极管则需要启用这个项目 */
