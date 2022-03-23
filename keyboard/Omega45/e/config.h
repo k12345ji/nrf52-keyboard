@@ -138,7 +138,7 @@ static const uint8_t column_pin_array[MATRIX_COLS] = {15, 16, 14, 31, 30, 28};
 // 旋钮负向按钮映射
 #define ROTARY_ENCODER_NEG 15,25
 // 独立旋钮按键  用于关机后开机
-#define ROTARY_BUTTON 10
+#define ROTARY_BUTTON 29
 // SSD1306 LCD屏幕
 #define SSD1306_SDA 21
 #define SSD1306_SCL 20
