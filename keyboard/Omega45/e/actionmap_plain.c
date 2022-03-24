@@ -42,7 +42,7 @@ const action_t actionmaps[][MATRIX_ROWS][MATRIX_COLS] = {
         CAPS, A, S, D, F, G, H, J, K, L, SCLN, ENT,
         LSFT, Z, X, C, V, B, N, M, COMM, DOT, FN0, RSFT,
         LCTL, LGUI, LALT, FN1, SPC, FN2, FN3, FN4, FN5, FN5, 
-		VOLU, VOLD),
+		VOLU, ESC, VOLD),
 		
 	[1] = ACTIONMAP(
         ESC, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, BSPC,
