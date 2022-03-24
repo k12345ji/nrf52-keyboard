@@ -119,14 +119,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 按键阵列配置
 #define MATRIX_ROWS 8 /* 硬件阵列行数 */
-#define MATRIX_COLS 6 /* 硬件阵列列数 */
+#define MATRIX_COLS 7 /* 硬件阵列列数 */
 
 /* key combination for command */
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
 
 static const uint8_t row_pin_array[MATRIX_ROWS] = {9, 6, 4, 3, 10, 8, 26, 25};
-static const uint8_t column_pin_array[MATRIX_COLS] = {15, 16, 14, 31, 30, 28};
+static const uint8_t column_pin_array[MATRIX_COLS] = {15, 16, 14, 31, 30, 28, 29};
 
 #define COL_IN // 键盘阵列的二极管方向是从COL->ROW
 
