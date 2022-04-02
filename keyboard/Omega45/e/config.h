@@ -128,7 +128,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 static const uint8_t row_pin_array[MATRIX_ROWS] = {9, 6, 4, 3, 10, 8, 26, 25};
 static const uint8_t column_pin_array[MATRIX_COLS] = {15, 16, 14, 31, 30, 28, 29};
 
-#define COL_IN // 键盘阵列的二极管方向是从COL->ROW
+#define ROW_IN // 键盘阵列的二极管方向是从COL->ROW
 
 // 旋钮配置
 #define ROTARY_ENCODER_A 23
