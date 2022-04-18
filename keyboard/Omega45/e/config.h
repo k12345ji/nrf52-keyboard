@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define CONF_PRODUCT_ID 0x031E /* 配置项目内显示的ProductID */
 #define DEVICE_VER 0x0000 /* 硬件版本 */
 #define MANUFACTURER "Lotlab" /* 硬件制造商，用于蓝牙显示 */
-#define PRODUCT "Omega45E" /* 硬件名词，用于蓝牙显示 */
+#define PRODUCT "P47D-10" /* 硬件名词，用于蓝牙显示 */
 #define MACADDR_SEPRATOR ' ' /* 蓝牙名称后地址的分隔符。若不设置则不显示蓝牙名称后面的地址 */
 
 /* USB HID report parameter */
@@ -71,10 +71,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define LED_CAPS 11  //caps led ：5 ； led1、2、3、4：19、20、27、26
 
 // ws2812 RGB 配置
-#define RGB_DI_PIN 5
+#define RGB_DI_PIN 6
 #define RGBLED_NUM 46
 #define RGBLIGHT_ANIMATIONS
-#define RGB_PWR_PIN 7 // P-mos
+#define RGB_PWR_PIN 3 // P-mos
 //#define RGB_PWR_PIN_REVERSE 12 // N-mos
 
 // 3灯指示配置引脚
@@ -125,7 +125,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
 
-static const uint8_t row_pin_array[MATRIX_ROWS] = {9, 6, 4, 3, 10, 8, 26, 25};
+static const uint8_t row_pin_array[MATRIX_ROWS] = {9, 6, 5, 4, 10, 8, 26, 25};
 static const uint8_t column_pin_array[MATRIX_COLS] = {15, 16, 14, 31, 30, 27, 29};
 
 #define ROW_IN // 键盘阵列的二极管方向是从COL->ROW
